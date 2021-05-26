@@ -12,7 +12,7 @@ on:
 
 jobs:
   build:
-    runs-on: azrapp1
+    runs-on: self-hosted
 
     steps:
     - uses: actions/checkout@v2
@@ -41,7 +41,7 @@ jobs:
           !venv/
 
   deploy:
-    runs-on: azrapp1
+    runs-on: self-hosted
     needs: build
     environment:
       name: 'production'
